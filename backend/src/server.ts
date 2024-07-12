@@ -6,6 +6,10 @@ import cors from "@fastify/cors"
 
 const app = fastify()
 
+app.register(cors, {
+    origin: '*'
+})
+
 app.setValidatorCompiler(validatorCompiler);
 app.setSerializerCompiler(serializerCompiler);
 
